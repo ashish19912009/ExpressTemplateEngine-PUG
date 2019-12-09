@@ -1,0 +1,20 @@
+extends ./layout.pug
+block content
+    .row.justify-content-md-center
+        .col-sm-3
+            div.text-center
+                form.form-signin(method='post',action='/submitForm')
+                    img.mb-4(src='https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg', alt='', width='72', height='72')
+                    h1.h3.mb-3.font-weight-normal Sign In
+                    if msg === 1
+                        .alert.alert-danger(role='alert') Wrong Username or Password    
+                    label.sr-only(for='inputEmail') Username
+                    input#inputEmail.form-control(type='email',name='username', placeholder='Email address', required='', autofocus='')
+                    label.sr-only(for='inputPassword') Password
+                    input#inputPassword.form-control(type='password',name='password', placeholder='Password', required='')
+                    .checkbox.mb-3
+                      label
+                        input(type='checkbox', value='remember-me')
+                        |  Remember me
+                    button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+                    p.mt-5.mb-3.text-muted

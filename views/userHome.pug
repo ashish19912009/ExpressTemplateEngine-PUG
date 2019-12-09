@@ -1,0 +1,14 @@
+extends ./layoutHome.pug
+block   content
+    header.masthead.mb-auto
+      .inner
+        h3.masthead-brand User Home
+        nav.nav.nav-masthead.justify-content-center
+          a.nav-link.active(href='#') Home
+          a.nav-link(href='#') Features
+          a.nav-link(href='/') Logout
+    main.inner.cover(role='main')
+      h1.cover-heading Welcome #{email}
+      p.lead Ashish Kr. Rena
+      p.lead
+        a.btn.btn-lg.btn-secondary(href='#') Learn more
